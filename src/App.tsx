@@ -49,7 +49,8 @@ return (
     <Goodbye name={name} />
     {/* <Goodbye name={"Evgeniy"} /> */}
     <ProfileCard
-        avatar="https://u.to/zr9OIg "
+        // avatar="https://u.to/zr9OIg "
+        avatar="https://bit.ly/40Govr0"
         name="John Doe"
         description="A passionate developer."
       />
