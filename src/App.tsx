@@ -56,7 +56,7 @@ return (
       />
     <ProfileCard
       //  avatar="https://u.to/2r9OIg "
-        avatar='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEw9tV94lQzazcryxEpr8lIdv7t7Unc0roQcJLNub3ud_60sXZOwJqnv8&s'
+        avatar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEw9tV94lQzazcryxEpr8lIdv7t7Unc0roQcJLNub3ud_60sXZOwJqnv8&s"
         name="Jane Smith"
         description="A creative designer."
       />
