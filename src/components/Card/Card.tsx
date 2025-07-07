@@ -6,7 +6,8 @@ interface Props {
   export default function Card({ url, alt }: Props) {
     return (
       <div>
-        <img src={url} alt={alt} />
+        <img src={url} alt={alt} style={{ width: "200px" }} />
       </div>
     );
   }
+  
