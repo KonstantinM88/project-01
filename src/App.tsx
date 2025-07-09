@@ -5,6 +5,12 @@ import Goodbye from './components/Goodbye/Goodbye'
 import ProfileCard from './components/ProfileCard/ProfileCard'
 import Card from './components/Card/Card'
 import catPicture from "./assets/b.jpg"
+import { Counter } from './components/Counter/Counter'
+import PersonalGreeting from './components/PersonalGreeting/PersonalGreeting'
+// import React from 'react';
+import { SpaceMissionForm } from './components/SpaceMissionForm/SpaceMissionForm'
+import Demo from './components/Demo/Demo'
+import { AgePredictor } from './components/AgePredictor/AgePredictor'
 
 function App() {
  
@@ -44,6 +50,11 @@ function App() {
 const name = "Viktor"; 
 return (
     <>
+    <AgePredictor/>
+    <Demo />
+    <SpaceMissionForm />
+    <Counter />
+    <PersonalGreeting />
     <Greeting name={name} />
     <Greeting name={"Evgeniy"} age={18}/>
     <Goodbye name={name} />

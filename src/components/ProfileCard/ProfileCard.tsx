@@ -16,7 +16,15 @@
 
 // <img> с src={avatar} и alt="User avatar"
 // <h2> с именем
-// <p> с описанием
+// <p> с 
+
+
+// import styles from './ProfileCard.module.css';
+
+// Компонент ProfileCard
+// принимает три пропса: avatar, name и description
+
+
 interface Props {
   avatar: string;
     name: string;
