@@ -11,6 +11,7 @@ import PersonalGreeting from './components/PersonalGreeting/PersonalGreeting'
 import { SpaceMissionForm } from './components/SpaceMissionForm/SpaceMissionForm'
 import Demo from './components/Demo/Demo'
 import { AgePredictor } from './components/AgePredictor/AgePredictor'
+import { GenderPredictor } from './components/GenderPredictor/GenderPredictor'
 
 function App() {
  
@@ -50,6 +51,7 @@ function App() {
 const name = "Viktor"; 
 return (
     <>
+    <GenderPredictor />
     <AgePredictor/>
     <Demo />
     <SpaceMissionForm />
