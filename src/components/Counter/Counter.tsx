@@ -54,55 +54,48 @@ import React, { useState } from 'react';
 
 // import './Counter.css'; // если хочешь использовать отдельный CSS файл
 
+
+import style from "./Counter.module.css";
+
 export const Counter = () => {
-  const [counter, setCounter] = useState<number>(0);
-
-  const handlePlus = () => {
+  const initialValue = 0;
+  const [counter, setCounter] = useState<number>(initialValue);
+  // tuple - кортеж
+  // state, local state - состояние
+  // setter function - функция сеттер
+  function handlePlus() {
+    // setCounter(counter + 1);
     setCounter((prev) => prev + 1);
-  };
-
+    console.log(counter);
+  }
   const handleMinus = () => {
     setCounter((prev) => prev - 1);
   };
 
-  const handleReset = () => {
-    setCounter(0);
+  const resetCounter = () => {
+    setCounter(initialValue);
   };
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.heading}>Counter: {counter}</h2>
-      <div style={styles.buttons}>
-        <button style={styles.button} onClick={handlePlus}>+1</button>
-        <button style={styles.button} onClick={handleMinus}>-1</button>
-        <button style={styles.button} onClick={handleReset}>Reset</button>
-      </div>
+    <div className={style.counterCard}>
+      <h2>Counter: {counter}</h2>
+      <button type="button" onClick={handleMinus}>
+        -1
+      </button>
+      <button type="button" onClick={handlePlus}>
+        +1
+      </button>
+      <button type="button" onClick={resetCounter}>
+        Reset
+      </button>
     </div>
   );
 };
 
-// inline стили
-const styles = {
-  container: {
-    textAlign: 'center' as const,
-    padding: '20px',
-    fontFamily: 'Arial',
-  },
-  heading: {
-    fontSize: '24px',
-    marginBottom: '10px',
-  },
-  buttons: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '10px',
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: '16px',
-    cursor: 'pointer',
-  }
-};
+// создайте кнопку -1, которая бы уменьшала значения counter на 1
+// дополнительно создайте кнопку reset, которая бы сбрасывала значения counter до нуля
+// дополнительно, добавьте стили
+
 
 
 
