@@ -52,7 +52,7 @@
 
 // -----------------2---------------------------
 
-// import './Counter.css'; // если хочешь использовать отдельный CSS файл
+
 
 // import React, { useState } from 'react';
 // import style from "./Counter.module.css";
