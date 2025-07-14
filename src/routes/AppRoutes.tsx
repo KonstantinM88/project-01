@@ -11,15 +11,16 @@ import Home from "../pages/Home/Home";
 import NotFound from "../pages/NotFound/NotFound";
 import Registration from "../pages/Registration/Registration";
 import About from "../pages/About/About";
-// import AccountLayout from "../components/AccountLayout/AccountLayout"
+// import { AccountLayout } from "../layout/AccountLayout";
 import AccountSettings from "../components/AccountSettings/AccountSettings";
 import AccountInfo from "../components/AccountInfo/AccountInfo";
 // import { ProductsList } from "../components/ProductsList/ProductsList";
 import ProductPage from "../pages/ProductPage/ProductPage";
+import { UsersPage } from "../pages/UsersPage/UsersPage";
+import { UserPage } from "../pages/UserPage/UserPage";
+import Login from "../pages/Login/Login";
 import { ProductsList } from "../components/ProductList/ProductList";
 import { AccountLayout } from "../layout/AccoutLayout";
-// import { AccountLayout } from "../components/layout/AccoutLayout";
-// import { ProductsList } from "../components/ProductList/ProductList";
 
 export default function AppRoutes() {
   return (
@@ -28,6 +29,7 @@ export default function AppRoutes() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path={ROUTES.REGISTRATION} element={<Registration />} />
+          <Route path={ROUTES.LOGIN} element={<Login />} />
           <Route path={ROUTES.GENDER_PREDICTOR} element={<GenderPredictor />} />
           <Route path="/age-predictor" element={<AgePredictor />} />
           <Route path="/counter" element={<Counter />} />
@@ -49,6 +51,8 @@ export default function AppRoutes() {
               element={<AccountInfo />}
             />
           </Route>
+          <Route path={ROUTES.USERS} element={<UsersPage />} />
+          <Route path={ROUTES.USERS + "/:id"} element={<UserPage />} />
         </Route>
       </Routes>
     </>

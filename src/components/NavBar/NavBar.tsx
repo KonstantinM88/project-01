@@ -15,6 +15,9 @@ export const NavBar = () => {
         <NavLink to={ROUTES.REGISTRATION} className={classSelector}>
           Sign Up
         </NavLink>
+        <NavLink to={ROUTES.LOGIN} className={classSelector}>
+          Sign In
+        </NavLink>
         <NavLink to={ROUTES.GENDER_PREDICTOR} className={classSelector}>
           Gender predictor
         </NavLink>
@@ -34,8 +37,10 @@ export const NavBar = () => {
         <NavLink to="/products" className={classSelector}>
           Products
         </NavLink>
+        <NavLink to={ROUTES.USERS} className={classSelector}>
+          Users
+        </NavLink>
       </nav>
     </>
   );
 };
-
