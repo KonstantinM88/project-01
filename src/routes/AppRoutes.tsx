@@ -20,7 +20,8 @@ import { UsersPage } from "../pages/UsersPage/UsersPage";
 import { UserPage } from "../pages/UserPage/UserPage";
 import Login from "../pages/Login/Login";
 import { ProductsList } from "../components/ProductList/ProductList";
-import { AccountLayout } from "../layout/AccoutLayout";
+import { AccountLayout } from "../layout/AccountLayout";
+import AddProduct from "../pages/AddProduct/AddProduct";
 
 export default function AppRoutes() {
   return (
@@ -41,6 +42,7 @@ export default function AppRoutes() {
           <Route path={"/products"} element={<ProductsList />} />
           <Route path={"/products/:id"} element={<ProductPage />} />
           <Route path="*" element={<NotFound />} />
+          <Route path={ROUTES.ADD_PRODUCT} element={<AddProduct />} />
           <Route path={ROUTES.ACCOUNT} element={<AccountLayout />}>
             <Route
               path={ACCOUNT_ROUTES.ACCOUNT_INFO}

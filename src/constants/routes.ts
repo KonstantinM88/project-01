@@ -8,6 +8,7 @@ export const ROUTES = {
   ABOUT: "/about",
   ACCOUNT: "/account",
   USERS: "/users",
+  ADD_PRODUCT: "/add-product",
 } as const;
 
 export const ACCOUNT_ROUTES = {

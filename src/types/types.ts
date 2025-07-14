@@ -23,3 +23,11 @@ export interface User {
   role: string;
   avatar: string;
 }
+
+export interface NewProduct {
+  title: string;
+  price: number;
+  description: string;
+  categoryId: number;
+  images: string[];
+}
