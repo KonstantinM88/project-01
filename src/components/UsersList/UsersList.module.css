@@ -1,0 +1,39 @@
+.usersList {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .userItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .name,
+  .email {
+    transition: transform 0.2s;
+  }
+  
+  .userItem:hover .name,
+  .userItem:hover .email {
+    transform: scale(1.1);
+  }
