@@ -1,11 +1,16 @@
 import { ROUTES } from "../../constants/routes";
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
+// import { useContext } from "react";
+// import { AuthContext } from "../../context/AuthContext";
+import { useCurrentUser } from "../../hooks/useCurrentUser";
 
 export const NavBar = () => {
   const classSelector = ({ isActive }: { isActive: boolean }) => {
     return isActive ? styles.navLinkActive : styles.navLink;
   };
+
+  const { user } = useCurrentUser();
   return (
     <>
       <nav className={styles.navBar}>
@@ -43,6 +48,7 @@ export const NavBar = () => {
         <NavLink to={ROUTES.USERS} className={classSelector}>
           Users
         </NavLink>
+        {user?.email}
       </nav>
     </>
   );
