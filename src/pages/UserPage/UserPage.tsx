@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { User } from "../../types/types";
+import styles from "./UserPage.module.css";
 // import type { User } from "../../types";
 
 export const UserPage = () => {
@@ -27,5 +28,9 @@ export const UserPage = () => {
     fetchUserById(id);
   }, [id]);
 
-  return <div>{message ? <div>{message}</div> : <div>{user?.name}</div>}</div>;
+  return (
+    <div className={styles.container}>
+      {message ? <div>{message}</div> : <div>{user?.name}</div>}
+    </div>
+  );
 };

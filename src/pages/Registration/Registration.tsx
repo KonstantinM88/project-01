@@ -1,6 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
+import styles from "./Registration.module.css";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -42,7 +43,7 @@ const Registration = () => {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Signup</h1>
       {message ? <div>{message}</div> : null}
       <Formik
@@ -58,7 +59,7 @@ const Registration = () => {
         }}
       >
         {({ errors, touched }) => (
-          <Form>
+          <Form className={styles.form}>
             <label>Name:</label>
             <Field name="name" />
             {errors.name && touched.name ? <div>{errors.name}</div> : null}

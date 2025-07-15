@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./NotFound.module.css";
 
 export default function NotFound() {
   const [url, setUrl] = useState("");
@@ -14,7 +15,7 @@ export default function NotFound() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Page not found</h2>
       <img src={url} alt="cat" />
     </div>

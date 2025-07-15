@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Product } from "../../types/types";
+import styles from "./ProductPage.module.css";
 // import type { Product } from "../types/Product";
 
 export default function ProductPage() {
@@ -17,5 +18,5 @@ export default function ProductPage() {
     fetchProduct(id);
   }, [id]);
 
-  return <div>Product {product?.title}</div>;
+  return <div className={styles.container}>Product {product?.title}</div>;
 }

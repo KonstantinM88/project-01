@@ -1,0 +1,21 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background-color: #f0f0f0;
+    padding: 1rem;
+  }
+  
+  main {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  footer {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+  }

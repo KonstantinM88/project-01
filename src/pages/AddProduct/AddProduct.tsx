@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { NewProduct } from "../../types/types";
+import styles from "./AddProduct.module.css"; 
 
 export default function AddProduct() {
   const [title, setTitle] = useState("");
@@ -39,10 +40,10 @@ export default function AddProduct() {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Add Product</h1>
       {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <label>Title: </label>
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
         <label>Price: </label>
