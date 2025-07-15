@@ -54,7 +54,8 @@
 
 
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import { useState } from "react";
 import style from "./Counter.module.css";
 
 export const Counter = () => {
