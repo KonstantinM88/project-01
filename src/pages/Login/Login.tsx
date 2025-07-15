@@ -55,17 +55,21 @@ const Login = () => {
       >
         {({ errors, touched }) => (
           <Form className={styles.form}>
-            <label>Name:</label>
+            {/* <label>Name:</label> */}
+            <label>Email:</label>
+            <Field name="email" type="email" />
+            {errors.email && touched.email ? <div>{errors.email}</div> : null}
             <label>Password:</label>
             <Field name="password" type="password" />
             {errors.password && touched.password ? (
               <div>{errors.password}</div>
             ) : null}
-            <label>Email:</label>
-            <Field name="email" type="email" />
-            {errors.email && touched.email ? <div>{errors.email}</div> : null}
-            <label>Avatar:</label>
-            <button type="submit">Submit</button>
+
+            {/* <label>Avatar:</label> */}
+            {/* <button type="submit">Submit</button> */}
+            <button type="submit" className={styles.centerButton}>
+              Submit
+            </button>
           </Form>
         )}
       </Formik>

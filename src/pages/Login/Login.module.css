@@ -32,9 +32,13 @@
     background-color: #646cff;
     color: white;
     cursor: pointer;
-    align-self: flex-start;
+    align-self: center;
   }
   
   button:hover {
     background-color: #535bf2;
+  }
+
+  .centerButton {
+    align-self: center;
   }
