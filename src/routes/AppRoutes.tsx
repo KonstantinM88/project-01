@@ -23,6 +23,7 @@ import { ProductsList } from "../components/ProductList/ProductList";
 import { AccountLayout } from "../layout/AccountLayout";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import Galery from "../components/Galery/Galery";
+import ToggleCard from "../components/ToggleCard/ToggleCard";
 
 export default function AppRoutes() {
   return (
@@ -43,6 +44,7 @@ export default function AppRoutes() {
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path={"/products"} element={<ProductsList />} />
           <Route path={"/products/:id"} element={<ProductPage />} />
+          <Route path="/toggle-card" element={<ToggleCard />} />
           <Route path="*" element={<NotFound />} />
           <Route path={ROUTES.ADD_PRODUCT} element={<AddProduct />} />
           <Route path={ROUTES.ACCOUNT} element={<AccountLayout />}>

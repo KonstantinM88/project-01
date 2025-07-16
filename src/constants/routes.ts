@@ -1,3 +1,5 @@
+
+
 export const ROUTES = {
   HOME: "/",
   REGISTRATION: "/registration",
@@ -9,6 +11,7 @@ export const ROUTES = {
   ACCOUNT: "/account",
   USERS: "/users",
   ADD_PRODUCT: "/add-product",
+  // TOGGLE_CARD: "/toggle-card",
 } as const;
 
 export const ACCOUNT_ROUTES = {
