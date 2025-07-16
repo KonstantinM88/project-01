@@ -65,6 +65,9 @@ function handleLogout() {
         <NavLink to={"/galery"} className={classSelector}>
           Galery
         </NavLink>
+        {/* <Navlink to={"/toggle-card"} className={classSelector}>
+          ToggleCard */}
+         {/* </Navlink> */}
         {user?.email}
         {counter}
 
