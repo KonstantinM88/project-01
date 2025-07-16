@@ -22,6 +22,7 @@ import Login from "../pages/Login/Login";
 import { ProductsList } from "../components/ProductList/ProductList";
 import { AccountLayout } from "../layout/AccountLayout";
 import AddProduct from "../pages/AddProduct/AddProduct";
+import Galery from "../components/Galery/Galery";
 
 export default function AppRoutes() {
   return (
@@ -31,6 +32,7 @@ export default function AppRoutes() {
           <Route index element={<Home />} />
           <Route path={ROUTES.REGISTRATION} element={<Registration />} />
           <Route path={ROUTES.LOGIN} element={<Login />} />
+          <Route path={"/galery"} element={<Galery />} />
           <Route path={ROUTES.GENDER_PREDICTOR} element={<GenderPredictor />} />
           <Route path="/age-predictor" element={<AgePredictor />} />
           <Route path="/counter" element={<Counter />} />
@@ -44,6 +46,7 @@ export default function AppRoutes() {
           <Route path="*" element={<NotFound />} />
           <Route path={ROUTES.ADD_PRODUCT} element={<AddProduct />} />
           <Route path={ROUTES.ACCOUNT} element={<AccountLayout />}>
+          
             <Route
               path={ACCOUNT_ROUTES.ACCOUNT_INFO}
               element={<AccountSettings />}
@@ -55,6 +58,7 @@ export default function AppRoutes() {
           </Route>
           <Route path={ROUTES.USERS} element={<UsersPage />} />
           <Route path={ROUTES.USERS + "/:id"} element={<UserPage />} />
+          
         </Route>
       </Routes>
     </>

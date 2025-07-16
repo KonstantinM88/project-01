@@ -5,6 +5,8 @@ import type { User } from "../types/types";
 interface AuthContextType {
   user: User | undefined;
   setUser: (user: User | undefined) => void;
+  isAuthorized?: boolean;
+  setIsAuthorized: (isAuthorized: boolean) => void;
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(

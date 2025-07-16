@@ -4,16 +4,30 @@ import styles from "./NavBar.module.css";
 // import { useContext } from "react";
 // import { AuthContext } from "../../context/AuthContext";
 import { useCurrentUser } from "../../hooks/useCurrentUser";
+// import Counter from "../Counter/Counter";
+import { useCounter } from "../../hooks/useCounter";
 
 export const NavBar = () => {
   const classSelector = ({ isActive }: { isActive: boolean }) => {
     return isActive ? styles.navLinkActive : styles.navLink;
   };
 
-  const { user } = useCurrentUser();
+  const {counter} = useCounter();
+  
+  const { user, setIsAuthorized, isAuthorized } = useCurrentUser();
+
+function handleLogout() {
+  setIsAuthorized(false);
+
+  localStorage.removeItem("accessToken");
+  localStorage.removeItem("isAuthorized");
+  // setUser(undefined);
+}
+
   return (
     <>
-      <nav className={styles.navBar}>
+      <nav className="flex justify-center items-center gap-4 flex-wrap bg-pink-200 min-h-14 p-6">
+      {/* <nav className={styles.navBar}> */}
         <NavLink to="/" className={classSelector}>
           Home
         </NavLink>
@@ -48,7 +62,17 @@ export const NavBar = () => {
         <NavLink to={ROUTES.USERS} className={classSelector}>
           Users
         </NavLink>
+        <NavLink to={"/galery"} className={classSelector}>
+          Galery
+        </NavLink>
         {user?.email}
+        {counter}
+
+        {isAuthorized ? (
+          <button type="button" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : null}
       </nav>
     </>
   );
